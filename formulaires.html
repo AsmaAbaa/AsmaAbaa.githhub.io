@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>FORMULAIRES_HTML</title>
+    </head>
+
+    <p>
+    <h1>LES FORMULAIRES</h1>
+
+    <hr>
+
+    <h2>input de formulaire</h2>
+
+    <form method="get" action="">
+        <p><input type="text" name="pseudo" id="pseudo"></p>
+        <p><input type="password" name="pass" id="pass"></p>
+        <p><input type="email" name="mail" id="mail"></p>
+        <p><input type="date" name="date" id="date"></p>
+        <p><input type="datetime-local" id="anniv" name="birthdaytime"></p>
+    </form>
+
+    <br>
+    <hr>
+    <br>
+
+    <h2>Liste de tous les inputs</h2>
+
+    <form method="" action="">
+        <fieldset>
+            <legend>RADIO & CHECKBOX</legend>
+            <input type="radio" id="fraise" name="fruit" value="fraise">
+            <label for="fraise"> fraise</label><br>
+            <input type="radio" id="banane" name="fruit" value="banane" checked>
+            <label for="banane"> banane</label><br>
+            <input type="radio" id="orange" name="fruit" value="orange">
+            <label for="orange"> orange</label>
+            <br><br>
+            <input type="checkbox" id="fraise" name="fraise" value="fraise">
+            <label for="fraise"> fraise</label><br>
+            <input type="checkbox" id="banane" name="banane" value="banane" checked>
+            <label for="banane"> banane</label><br>
+            <input type="checkbox" id="orange" name="orange" value="orange" checked>
+            <label for="orange"> orange</label>
+        </fieldset>
+    </form>
+
+    <br><br>
+    <!-- <br>pattern="[a-z]{1,6} -->
+
+    <form method="" action="">
+        <fieldset>
+            <legend>DONNEES PERSONNELLES</legend>
+            <label for="pseudo">Pseudo (entre 1 et 6 caractères): </label>
+            <input type="text" id="pseudo" maxlength="10"
+                title="Il faut au max 10 caractères tous en minuscules ou majuscules" pattern="[a-zA-Zéèêï@!]+" name="pseudo">
+            <br><br>
+            <label for="pass">Mot de passe :</label>
+            <input type="password" id="pass" autofocus>
+            <br><br>
+            <label for="nombre">Champ désactivé :</label>
+            <input type="text" id="no" value="desactivé" disabled>
+            <br><br>
+            <label for="mail">Courriel :</label>
+            <input type="email" id="mail" placeholder="écrire ici votre email" required />
+            <p><input type="submit" name="form3" value="Envoyer"></p>
+        </fieldset>
+    </form>
+
+    <br><br>
+
+    <form method="" action=""></form>
+    <fieldset>
+        <legend>POUR ALLER PLUS LOIN</legend>
+        <label for="couleur">Couleur :</label>
+        <input type="color" id="couleur" required />
+        <br><br>
+        <label for="codepostal">Code postal :</label>
+        <input type="text" id="codepostal" maxlength="5" name="codepostal" pattern="[0-9]{5}" title="ex: 92210">
+        <br><br>
+        <label for="tlf">Téléphone :</label>
+        <input type="text" id="tlf" name="tlf" pattern="0[1-9][0-9]{8}">
+        <br><br>
+        <label for="datemax">Entrer une date antérieure au 1 janvier 2000:</label>
+        <input type="date" id="datemax" name="datemax" max="1999-12-31"><br><br>
+        <label for="datemin">Entrer une date postérieure au 1 janvier 2022:</label>
+        <input type="date" id="datemin" name="datemin" min="2022-01-02"><br><br>
+        <br>
+        <label for="fichier">Selectionner un fchier :</label>
+        <input type="file" id="fichier" name="myfile">
+        <br><br>
+        <label for="nombre">Nombre (entre 1 and 5) :</label>
+        <input type="number" id="nombre" name="quantity" min="1" max="5">
+        <br><br>
+        <label for="intervalle">De trois en trois :</label>
+        <input type="number" id="intervalle" name="points" step="3">
+        <br><br>
+        <label for="curseur">curseur:</label>
+        <input type="range" id="curseur" name="vol" min="0" max="50">
+        <br><br>
+        <label for="rechercher">Rechercher:</label>
+        <input type="search" id="rechercher" name="gsearch">
+        <br><br>
+        <label for="tel">Téléphone:</label>
+        <input type="tel" id="tel" name="phone">
+        <br><br>
+        <label for="horaire">Horaire:</label>
+        <input type="time" id="horaire" name="appt">
+        <br><br>
+        <label for="web">Site web en lecture seule:</label>
+        <input type="url" id="web" name="homepage" value="google.fr" readonly>
+        <br><br>
+        <label for="week">Selectionner une semaine:</label>
+        <input type="week" id="week" name="week">
+        <br>
+        <input type="hidden" id="fantome" name="fantome">
+        <br>
+    </fieldset>
+
+    <br><br>
+
+    <fieldset>
+        <legend>INPUT & DATALIST</legend>
+        <label for="pays">Choisir un pays:</label>
+        <select id="pays" name="pays">
+            <option value="france">France</option>
+            <option value="italie">Italie</option>
+            <option value="espagne" selected>Espagne</option>
+            <option value="belgique">Belgique</option>
+        </select>
+        <br><br>
+        <textarea name="message" rows="10" cols="50">Je suis une jolie zone de texte !
+      </textarea>
+        <br><br>
+        DATALISTE :
+        <input list="browsers">
+        <datalist id="browsers">
+            <option value="Internet Explorer">
+            <option value="Firefox">
+            <option value="Chrome">
+            <option value="Opera">
+            <option value="Safari">
+        </datalist>
+        <br><br>
+        <input type="submit" name="form4" value="envoyer">
+        <input type="reset">
+        <br>
+    </fieldset>
+    </form>
+    <br><br>
+
+    <!-- Vous pouvez également construire vos expressions personnalisées ou PATTERNS :
+[a-z] : que des lettres minuscules
+[0-9] : que des chiffres
+[a-zA-Z] : lettre minuscules ou majuscules
+[a-z0-9_-] : que des minuscules, chiffres, underscore ou trait d’union
+[0-9]{5} : 5 chiffres obligatoirement
+[0-9]{2,10} : entre 2 et 10 chiffres -->
+    </body>
+
+</html>
